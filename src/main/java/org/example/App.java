@@ -17,18 +17,21 @@ public class App {
         BankConnection bankConnection2 = new BankConnection();
         bankConnection2.setBank_Id(102);
         bankConnection2.setBank_Name("BOI");
-        EndUser endUser=new EndUser();
+        EndUser endUser = new EndUser();
         endUser.setUser_id(201);
         endUser.setUser_name("Simanta Sen");
-        EndUser endUser2=new EndUser();
+        EndUser endUser2 = new EndUser();
         endUser2.setUser_id(202);
         endUser2.setUser_name("Santanu Sen");
+        EndUser endUser3 = new EndUser();
+        endUser3.setUser_id(203);
+        endUser3.setUser_name("Munna Sen");
 
         bankConnection.setCompany(company);
         bankConnection2.setCompany(company);
         endUser.setCompany(company);
         endUser2.setCompany(company);
-
+        endUser3.setCompany(company);
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Company.class)
                 .addAnnotatedClass(BankConnection.class).addAnnotatedClass(EndUser.class);
         SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -39,6 +42,7 @@ public class App {
         session.save(bankConnection2);
         session.save(endUser);
         session.save(endUser2);
+        session.save(endUser3);
         transaction.commit();
         session.close();
     }
