@@ -13,7 +13,7 @@ public class App {
         company.setCompany_Location("Bangalore");
         BankConnection bankConnection = new BankConnection();
         bankConnection.setBank_Id(101);
-        bankConnection.setBank_Name("SBI");
+        bankConnection.setBank_Name("STATE BANK OF INDIA");
         BankConnection bankConnection2 = new BankConnection();
         bankConnection2.setBank_Id(102);
         bankConnection2.setBank_Name("BOI");
